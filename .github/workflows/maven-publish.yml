@@ -20,10 +20,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.inputs.branch }}
       - name: Set up
         uses: actions/setup-java@v4
         with:
@@ -37,6 +33,10 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
       - name: Install WebObjects
         run: mvn io.github.wocommunity:woinstall-maven-plugin:woinstall
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
       - name: Configure git user
         run: |
           git config user.name "Github Actions"
