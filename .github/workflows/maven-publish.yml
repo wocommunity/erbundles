@@ -37,11 +37,11 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
       - name: Install WebObjects
         run: |
-          mkdir tmp
-          cd tmp
+          mkdir woinstalltmp
+          cd woinstalltmp
           mvn io.github.wocommunity:woinstall-maven-plugin:woinstall
           cd ..
-          rm -rf tmp
+          rm -rf woinstalltmp
       - name: Configure git user
         run: |
           git config user.name "Github Actions"
