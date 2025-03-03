@@ -39,26 +39,16 @@
 		<project.scm.id>github</project.scm.id>
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.webobjects</groupId>
-				<artifactId>webobjects-bom</artifactId>
-				<version>5.4.3</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.webobjects</groupId>
 			<artifactId>JavaFoundation</artifactId>
+			<version>5.4.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.webobjects</groupId>
 			<artifactId>JavaWebObjects</artifactId>
+			<version>5.4.3</version>
 			<exclusions>
 				<exclusion>
 					<groupId>com.webobjects</groupId>
